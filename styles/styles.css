@@ -1,0 +1,300 @@
+*
+{
+    padding: 0;
+    margin: 0;
+}
+
+header
+{
+    background-color: #2f343b;
+    padding-top: 20px;
+    padding-bottom: 5px;
+}
+body
+{
+    background-color: #f2f2f2;
+    
+}
+
+.links
+{
+    width: 80%;
+    height: 80px;
+    margin: auto;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    background-color: lightgrey;
+    background-image: url(../images/op-strip.gif);
+    border-radius: 20px;
+    text-align: center;
+}
+
+.logo img
+{
+    position: relative;
+    /*background-image: url(../images/logo.png);*/
+    background-repeat: no-repeat;
+    background-color: white;
+    width: 10%;
+    height: 80px;
+    float: left;
+    display: inline-block;
+    padding-top: 0px;
+    text-align: center;
+    /*border-left: 5px solid  silver;*/
+}
+
+.homeimage 
+{
+    background-image: url(../images/home/apple_collection.jpg);
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;    
+    width: 100%;
+    text-align: center;
+    color: #2f343b;
+}
+.aboutimage 
+{
+    background-image: url(../images/home/about.jpg);
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;    
+    width: 100%;
+    text-align: center;
+    line-height: 130px;
+    color: white;
+}
+.ipadimage 
+{
+    background-image: url(../images/ipad/ipad1.png);
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;    
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+.tvimage 
+{
+    background-image: url(../images/tv/tv.jpg);
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;    
+    width: 100%;
+    text-align: center;
+    color: grey;
+    line-height: 110px;
+}
+.macimage 
+{
+    background-image: url(../images/macbook/macbook.png);
+    background-size:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 500px;    
+    width: 100%;
+    text-align: center;
+    color: black;
+    line-height: 70px;
+}
+.text p
+{
+    font-size: 150%;
+    color: #666;
+    margin: 20px;
+    text-align: left;
+}
+.text 
+{
+    text-align: center;
+}
+.anchor
+{
+    float: right;
+}
+.anchor a
+{
+    position: center;
+    margin: 0;
+}
+.menu
+{
+    padding: 5px 10px 5px 10px;
+    margin: 10px;
+    /*float: right;*/
+    line-height: 50px;
+    text-align: center;
+    border-radius: 20px;
+    text-transform: uppercase;
+    margin-top: 5px;
+    color: #666;
+    font-weight: bold;
+    /*box-shadow: 5px 5px 10px blue;*/
+}
+
+a:link
+{
+    text-decoration: none;
+}
+
+a:hover
+{
+    color: grey;
+      background: white;
+}
+a:focus
+{
+    background-color: white;
+    color: grey;
+}
+a:visited
+{
+    background: white;
+}
+
+.form
+{
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 5%;
+    width: 40%;
+    border: 3px solid lightgrey;
+    background: lightgrey;
+    border-radius: 5px;
+    text-align: center;
+}
+.form input , textarea
+{
+    width: 80%;
+    padding: 10px;
+    margin: 5px;
+}
+.form h1
+{
+    color: grey;
+}
+.form table
+{
+    border-spacing: 10px;
+}
+.form a
+{
+    color: grey;
+}
+.passlbl 
+{
+    margin-left: 8%;
+    text-align: left;
+}
+.button
+{
+    width: 80%;
+    padding: 10px;
+    margin:5px;
+    background: #42b4d6;
+    border-color: #42b4d6;
+}
+.number
+{
+    color: white;
+    background: green;
+    padding: 3px;
+    border-radius: 100%;  
+}
+legend
+{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+}
+.left_controls
+{
+    width: 40%;
+    text-align: left;
+    
+}
+.images
+{
+    margin: 0;
+    width: 100%;
+    padding-left: 3%;
+    overflow: auto;
+}
+
+.image {
+    margin: 20px;
+    border: 5px solid #ccc;
+    float: left;
+    width: 25%;
+    height: 300px;
+}
+.image img{
+    width: 100%;
+    height: 200px;
+    margin: auto;
+}
+.watch
+{
+    width: 70%;
+}
+.image img:hover
+{
+    border: 3px solid silver;
+}
+.image,
+.desc
+{
+    padding: 15px;
+    text-align: center;
+    color: #666;
+}
+.products
+{
+    background: white;
+}
+.products img
+{
+    width: 24.7%;
+    height: 200px;
+    background-size: 100%;
+    /*border: 5px solid white;*/
+    margin-left: 0;
+    margin-right: 0;
+}
+.wrapper {
+min-height: 100%;
+height: auto !important;
+height: 100%;
+margin: 0 auto -4em;
+}
+.footer, .push {
+height: 4em;
+background-color: #666;
+line-height: 4em;
+text-align: center;
+color: #f2f2f2;
+}
+.push
+{
+    background-color: #f2f2f2;
+}
+/*
+ *forestgreen
+ *lightgrey
+ *lightblue
+ *lightcoral
+ *
+ *tomato
+ *navy
+
+ *#3598DB
+ *#f2f2f2
+ *#2f343b
+ *#666
+
+ */

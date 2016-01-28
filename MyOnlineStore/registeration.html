@@ -1,0 +1,125 @@
+<html>
+    <head>
+        <link rel= "stylesheet" href="../styles/styles.css" type="text/css" />
+        <title>
+            HTML Project
+        </title>
+    </head>
+        <body>
+            <div class="wrapper">
+            <header>
+                <div class="links">
+                <div class="logo">
+                     <a href="../index.html">
+                    <img src="../images/home/apple.png" alt="Logo" />
+                     </a>
+                </div>
+                <div class="anchor">
+                    <a href="../index.html" class="menu">Home</a>
+                    <a href="gallery.html" class="menu">Gallery</a>
+                    <a href="about.html" class="menu">About US</a>
+                    <a href="contact.html" class="menu">Contact US</a>
+                    <a href="map.html" class="menu">Store Map</a>
+                    <a href="registeration.html" class="menu">Sign Up</a>
+                </div>
+            </div>
+            </header>
+            
+         <div class="form">
+            <form action="" method="get" >
+                <h1>Registeration Form</h1>
+                <fieldset>
+                    <legend><span class="number">1</span> Your Basic Info</legend>
+                    <input type="text" name="firstName" value="First Name">
+                    <br />
+                    <input type="text" name="lastName" value="Last Name">
+                    <br />
+                    <input type="email" name="userMail" value="Email: example@mail.com">
+                    <br />
+                    <div class="passlbl">
+                    <label for="userPassword" >Password:</label><br />
+                    </div>
+                    <input type="password" name="userPassword" >
+                     <div class="passlbl">
+                    <label for="userConfirmPassword" >Confirm Password:</label><br />
+                    </div>
+                    <input type="password" name="userConfirmPassword">
+                
+                </fieldset>
+                <fieldset>
+                     <legend><span class="number"> *</span> Additional Info</legend>
+                    <select name="track">
+                        <option >-- Select Your Device --</option>
+                        <optgroup label="iPhone">
+                        <option value="OS">iPhone 6 plus</option>
+                        <option value="EL">iPhone 6</option>
+                        <option value="SD">iPhone 5</option>
+                        </optgroup>
+                        <optgroup label="iPad">
+                        <option value="OS">iPad Pro</option>
+                        <option value="EL">iPad Air 2</option>
+                        <option value="SD">iPad Air</option>
+                        </optgroup>
+                        <optgroup label="MacBook">
+                        <option value="OS">MacBook Pro</option>
+                        <option value="EL">MacBook Air</option>
+                        <option value="SD">New MacBook</option>
+                        </optgroup>
+                    </select>
+                    <br /><br />
+                    <label>Gender</label><br />
+                    <table>
+                        <tr>
+                            <td>
+                                 <input type="radio" id="male" value="male" name="gender">
+                            </td>
+                            <td>
+                                <label for="male">Male</label>
+                            </td>
+                        </tr>
+                         <tr>
+                            <td>
+                                 <input type="radio" id="female" value="male" name="gender">
+                            </td>
+                            <td>
+                                <label for="female">Female</label>
+                            </td>
+                        </tr>
+                    </table>
+                    <br />
+                    <label>Our News Letter:</label><br />
+                   <table>
+                    <tr>
+                            <td>
+                                 <input type="checkbox" id="news" value="news" name="news">
+                            </td>
+                            <td>
+                                <label for="news">Receive our weekly newsletter</label>
+                            </td>
+                        </tr>
+                    <tr>
+                            <td>
+                                 <input type="checkbox" id="offers" value="offers" name="offers">
+                            </td>
+                            <td>
+                                <label for="offers">Receive our offers mails</label>
+                            </td>
+                        </tr>
+                   </table>
+                    <br />
+                  
+                </fieldset>
+                 <br />
+                <button type="submit" class="button">Sign Up</button>
+            </form>
+            </div>
+            
+             <div class="push"></div>
+             </div>
+            
+            <div class="footer">
+            <p>Copyright &#169; 2015 Wissa Azmy. All rights reserved.</p>
+        </div>
+        </body>
+    
+</html>
