@@ -86,7 +86,7 @@
           <file leaf-file-name="product.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/product.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.2647059">
+                <state vertical-scroll-proportion="0.2662722">
                   <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
                   <folding>
                     <marker date="1454160203000" expanded="true" signature="285:327" placeholder="SELECT * FRO... product" />
@@ -160,7 +160,7 @@
           <file leaf-file-name="inventory_list.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/inventory_list.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="2.514706">
+                <state vertical-scroll-proportion="2.5295858">
                   <caret line="62" column="26" selection-start-line="62" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
                   <folding>
                     <element signature="e#6#91#0#PHP" expanded="false" />
@@ -391,6 +391,13 @@
       <option name="number" value="Default" />
       <updated>1453718777813</updated>
     </task>
+    <task id="LOCAL-00001" summary="db_connection Edited&#10;Product class finished &#10;User class added&#10;User_list added&#10;inventory_list Edited&#10;">
+      <created>1454227506714</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1454227506714</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -399,9 +406,10 @@
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1477363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.50277996" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2025417" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46448088" sideWeight="0.49722" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46575344" sideWeight="0.49722" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4726776" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -427,6 +435,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="db_connection Edited&#10;Product class finished &#10;User class added&#10;User_list added&#10;inventory_list Edited&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="db_connection Edited&#10;Product class finished &#10;User class added&#10;User_list added&#10;inventory_list Edited&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -881,7 +893,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2647059">
+        <state vertical-scroll-proportion="0.2662722">
           <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding>
             <marker date="1454160203000" expanded="true" signature="285:327" placeholder="SELECT * FRO... product" />
@@ -904,7 +916,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/inventory_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.514706">
+        <state vertical-scroll-proportion="2.5295858">
           <caret line="62" column="26" selection-start-line="62" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="false" />
