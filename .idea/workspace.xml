@@ -1,24 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="96b5967a-ada8-414e-aa05-d2cff532596a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/cart-process.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/cart.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/category.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/product-list.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/pages/users.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Store.iml" afterPath="$PROJECT_DIR$/.idea/Store.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/admin_login.php" afterPath="$PROJECT_DIR$/pages/admin_login.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/index.php" afterPath="$PROJECT_DIR$/pages/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/inventory_list.php" afterPath="$PROJECT_DIR$/pages/inventory_list.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/product.php" afterPath="$PROJECT_DIR$/pages/product.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pages/session_validation.php" afterPath="$PROJECT_DIR$/pages/session_validation.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/db-connect.php" afterPath="$PROJECT_DIR$/scripts/db-connect.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/index.php" afterPath="$PROJECT_DIR$/scripts/index.php" />
-    </list>
+    <list default="true" id="96b5967a-ada8-414e-aa05-d2cff532596a" name="Default" comment="" />
     <ignored path="Store.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -86,7 +69,7 @@
           <file leaf-file-name="product.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/product.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.2662722">
+                <state vertical-scroll-proportion="0.13274336">
                   <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
                   <folding>
                     <marker date="1454160203000" expanded="true" signature="285:327" placeholder="SELECT * FRO... product" />
@@ -160,7 +143,7 @@
           <file leaf-file-name="inventory_list.php" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pages/inventory_list.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="2.5295858">
+                <state vertical-scroll-proportion="1.2610619">
                   <caret line="62" column="26" selection-start-line="62" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
                   <folding>
                     <element signature="e#6#91#0#PHP" expanded="false" />
@@ -402,14 +385,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1477363" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32876712" sideWeight="0.50277996" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2025417" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46575344" sideWeight="0.49722" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.46575344" sideWeight="0.49722" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494043" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4726776" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -490,20 +473,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyOnlineStore/storeadmin/inventory_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyOnlineStore/registeration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="53" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -599,10 +568,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyOnlineStore/storeadmin/inventory_list.php">
+    <entry file="file://$PROJECT_DIR$/pages/admin_login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1454021756000" expanded="true" signature="361:434" placeholder="SELECT id FR... admin" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -616,13 +588,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyOnlineStore/storeadmin/inventory_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/admin_login.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -630,30 +595,6 @@
           <folding>
             <marker date="1454021756000" expanded="true" signature="361:434" placeholder="SELECT id FR... admin" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyOnlineStore/storeadmin/inventory_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/admin_login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <marker date="1454021756000" expanded="true" signature="361:434" placeholder="SELECT id FR... admin" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyOnlineStore/storeadmin/inventory_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -667,20 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MyOnlineStore/storeadmin/inventory_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="38" selection-start-line="18" selection-start-column="38" selection-end-line="18" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyOnlineStore/registeration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="53" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -733,20 +660,6 @@
           <folding>
             <marker date="1454021756000" expanded="true" signature="361:434" placeholder="SELECT id FR... admin" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyOnlineStore/storeadmin/inventory_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.3908554">
-          <caret line="46" column="32" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MyOnlineStore/registeration.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42035398">
-          <caret line="19" column="53" selection-start-line="19" selection-start-column="41" selection-end-line="19" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -893,7 +806,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/product.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2662722">
+        <state vertical-scroll-proportion="0.13274336">
           <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
           <folding>
             <marker date="1454160203000" expanded="true" signature="285:327" placeholder="SELECT * FRO... product" />
@@ -916,7 +829,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/inventory_list.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.5295858">
+        <state vertical-scroll-proportion="1.2610619">
           <caret line="62" column="26" selection-start-line="62" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
           <folding>
             <element signature="e#6#91#0#PHP" expanded="false" />
