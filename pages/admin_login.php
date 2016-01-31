@@ -5,22 +5,21 @@ if(isset($_SESSION['manager'])){
 	exit();
 }
 
+require '../scripts/db-connect.php';
+
 if(isset($_POST['username']) && isset($_POST['password'])) {
 
     $adminUser = preg_replace('#[^A-Za-z0-9]#i', "", $_POST['username']);
     $password = preg_replace('#[^A-Za-z0-9]#i', "", $_POST['password']);
 
-    include '../scripts/db-connect.php';
-
     $query = "SELECT id FROM admin WHERE username='$adminUser' AND password='$password'";
 
-$sql = mysqli_query($connection, $query);
+$sql = $db->query($query);
 
-
-$existCount = mysqli_num_rows($sql);
+$existCount = $db->num_rows($sql);
 
 if ($existCount == 1) {
-    $row = mysqli_fetch_assoc($sql);
+    $row = $db->fetch_assoc($sql);
     $id = $row["id"];
     $_SESSION['id'] = $id;
 
@@ -30,7 +29,7 @@ if ($existCount == 1) {
     exit();
 
 } else {
-    echo "User Not Found, try again";
+    echo 'User Not Found, <a href="admin_login.php">try again</a>';
     exit();
 }
 }

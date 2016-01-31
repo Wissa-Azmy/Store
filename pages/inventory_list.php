@@ -5,7 +5,11 @@
  * Date: 1/25/16
  * Time: 2:20 PM
  */
+require "../scripts/db-connect.php";
+
 require 'session_validation.php';
+
+require 'product.php';
 
 /************** ERROR REPORTING. *******************/
 error_reporting(E_ALL);  // set the php.ini config. file to dispaly all the errors
@@ -13,55 +17,42 @@ ini_set('error_display','1');
 
 /************** VIEW PRODUCT LIST ******************/
 
-$productList = '';
+$productList = [];
 
-$query = "SELECT * FROM product";
+$result = product::viewAll();
 
-$sql = mysqli_query($connection,$query);
-$productCount = mysqli_num_rows($sql);
-
-
-if($productCount > 0){
-
-//    while($product = mysqli_fetch_assoc($sql)){
-//        $id = $product['id'];
-//        $product_name= $product['product_name'];
-//        $productList .= "$id- $product_name<br/>";
-//    }
-
-    foreach($sql as $product){
-//        $products = mysqli_fetch_assoc($product);   // Not affective ???????!!!!!
+if(!empty($result)){
+    foreach($result as $product){
 
         $id = $product['id'];
         $product_name= $product['product_name'];
-        $productList .= "$id- $product_name<br/>";
+        $price = $product['price'];
+        $details = $product['details'];
+        $category = $product['category'];
+        $subcategory = $product['subcategory'];
+        $dateAdded = $product['date_added'];
+
+        $productList[]= "<td>$id</td><td>$product_name</td><td>$price</td><td>$details</td><td>$category</td><td>$subcategory</td><td>$dateAdded</td>";
     }
 
 }else{
-    $productList = "There are no products in the inventory to be listed.";
+    $productList[]= "There are no products in the inventory to be listed.";
 }
 
-/******************* PRODUCT FORM PROCESSING ****************************/
+/******************* ADD PRODUCT FORM PROCESSING ****************************/
 if(isset($_POST['productName'])){
-    $product_name = mysqli_real_escape_string($connection, $_POST['productName']);
-    $price = mysqli_real_escape_string($connection, $_POST['price']);
-    $category = mysqli_real_escape_string($connection, $_POST['category']);
-    $subcategory = mysqli_real_escape_string($connection, $_POST['subcategory']);
-    $details = mysqli_real_escape_string($connection, $_POST['details']);
 
-    $query = "SELECT * FROM product WHERE product_name = '$product_name'";
-    $sql = mysqli_query($connection, $query);
+    $product = new product;
 
-    $rows = mysqli_num_rows($sql);
+    $product->productName = $db->escape_string($_POST['productName']);
+    $product->price = $db->escape_string($_POST['price']);
+    $product->details = $db->escape_string($_POST['details']);
+    $product->category = $db->escape_string($_POST['category']);
+    $product->subcategory = $db->escape_string($_POST['subcategory']);
 
-    if($rows > 0){
-        echo "Invalid, You are trying to add a product that already exists.";
-        exit();
-    }else{
-        $query = "INSERT INTO product VALUES(null,'$product_name','$price','$details','$category','$subcategory',now())";
-        $sql = mysqli_query($connection, $query) or die("Error adding the Product");
-        header('location:inventory_list.php');
-    }
+    $product->insert();
+    header('location:inventory_list.php');
+
 }
 ?>
 
@@ -74,12 +65,38 @@ if(isset($_POST['productName'])){
     <title>Inventory</title>
 </head>
 <body>
+<div align="right">
+    <a href="admin_logout.php" class="menu">Log out</a>
+</div>
 <div align="center" id="main">
     <a href="#inventoryForm" class="menu">+ Add Products</a>
 
     <p>Inventory List: </p>
     <br/>
-    <?php echo $productList; ?>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Details</th>
+            <th>Category</th>
+            <th>SubCategory</th>
+            <th>Date Added</th>
+            <th></th>
+            <th></th>
+        </tr>
+        </thead>
+        <tbody>
+    <?php
+    foreach($productList as $item){
+        echo "<tr>";
+        echo $item . "<td><button name = 'editProduct' class=\"button\" value = 'Edit'>Edit</button></td>  <td> <button name = 'editProduct' class=\"button\" value = 'Edit'>Delete</button></td>";
+        echo "</tr>";
+    }
+    ?>
+        </tbody>
+    </table>
 
     <a name="inventoryForm" id="inventoryForm"></a>
     <div class="form">

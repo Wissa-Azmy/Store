@@ -45,6 +45,10 @@ class MySQL_connect {
         return mysqli_affected_rows($this->connection);
     }
 
+    public function escape_string($string) {
+        return mysqli_real_escape_string($this->connection, $string);
+    }
+
     public function closeConnection(){
         if(isset($this->connection)){
             mysqli_close($this->connection);

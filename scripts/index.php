@@ -21,6 +21,11 @@ $sql = "SELECT * FROM product";
 $last = $db->query($sql);
 $foundProduct = $db->fetch_assoc($last);
 
-echo $foundProduct['product_name']." ".$foundProduct['price'];
+foreach ($last as $prod) {
+	# code...
+	echo $prod['product_name']." ".$prod['price'] . "<br/>";
+}
+
+
 
 ?>
