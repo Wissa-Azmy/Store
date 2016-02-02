@@ -15,7 +15,7 @@ error_reporting(E_ALL);  // set the php.ini config. file to dispaly all the erro
 ini_set('error_display','1');
 
 /************** VIEW PRODUCT LIST ******************/
-
+function viewProducts(){
 $productList = [];
 
 $result = product::viewAll();
@@ -39,15 +39,6 @@ if(!empty($result)){
         $productItem .= "<td>$subcategory</td><td>$dateAdded</td>";
         $productItem .= "<td>$keywords</td>";
         $productItem .= "<td>
-            <!--div class='dropdown'>
-                <button name = 'action' class='btn btn-primary btn-lg' data-toggle='dropdown' value='$id'>
-                    Action <span class='caret'></span>
-                </button>
-                <ul class='dropdown-menu'>
-                    <li><a href='#' id='edit' class='edit'>Edit</a></li>
-                    <li><a href='javascript:void(0);' class='delete'>Delete</a></li>
-                </ul>
-            </div-->
              <button class='edit btn btn-primary btn-lg' value='$id'>Edit</button>
         </td>
         <td>
@@ -64,6 +55,7 @@ if(!empty($result)){
     $productList[]= "There are no products in the inventory to be listed.";
 }
     echo json_encode($productList);
+}
 
 /******************* ADD PRODUCT, FORM PROCESSING ****************************/
 if(isset($_POST['productName'])){
@@ -77,23 +69,39 @@ if(isset($_POST['productName'])){
     $product->subcategory = $db->escape_string($_POST['subcategory']);
     $product->keywords = $db->escape_string($_POST['keywords']);
 
-    $product->photo = $db->escape_string($_FILES['photo']['name']);
+    $product->photo = ($_FILES['photo']['name']);
+//    echo "<pre>";
+//    var_dump($_FILES['photo']);
+//    echo "</pre>";
     $photo_tmp = $_FILES['photo']['tmp_name'];
     move_uploaded_file($photo_tmp, "../images/$product->photo");
 
    // Form Validation Requiered in advance.
         $product->insert();
-        header('location:inventory_list.php');
+//        header('location:inventory_list.php');
 }
 
 /******************* DELETE PRODUCT ****************************/
 
-if(isset($_GET['id'])){
-    $id = $db->escape_string($_GET['id']);
+if(isset($_REQUEST['id'])){
+//    echo $_GET['id'] . " inside the Delete function";
+    $id = $db->escape_string($_REQUEST['id']);
     $product = new product($id);
     $product->delete();
 }
+viewProducts();
 
+/* BootStrap Create DropDown menu Button
+ *   <!--div class='dropdown'>
+                <button name = 'action' class='btn btn-primary btn-lg' data-toggle='dropdown' value='$id'>
+                    Action <span class='caret'></span>
+                </button>
+                <ul class='dropdown-menu'>
+                    <li><a href='#' id='edit' class='edit'>Edit</a></li>
+                    <li><a href='#' class='delete'>Delete</a></li>
+                </ul>
+            </div-->
+ */
 
 ?>
 

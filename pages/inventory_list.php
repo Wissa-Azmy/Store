@@ -112,7 +112,7 @@ require 'session_validation.php';
             <button type="submit" id="submit" class="button">Add Product</button>
         </form>
     </div>
-
+    <form action="../pages/inventory_process.php"
 
 </div>
 <script src="../scripts/main.js"></script>

@@ -15,9 +15,11 @@ class Product{
         global $db;
 		if($id!=-1) { // To view only one product by id if it's sent with the constructor.
 			$query = "SELECT * FROM product WHERE id=$id LIMIT 1";
+
 			$result = $db->query($query);
 			$product = $db->fetch_assoc($result);
-            
+
+            $this->id = $product['id'];
             $this->productName = $product['name'];
 			$this->price = $product['price'];
 			$this->details = $product['details'];
