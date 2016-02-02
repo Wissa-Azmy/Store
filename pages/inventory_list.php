@@ -9,51 +9,6 @@ require "../scripts/db-connect.php";
 
 require 'session_validation.php';
 
-require 'product.php';
-
-/************** ERROR REPORTING. *******************/
-error_reporting(E_ALL);  // set the php.ini config. file to dispaly all the errors
-ini_set('error_display','1');
-
-/************** VIEW PRODUCT LIST ******************/
-
-$productList = [];
-
-$result = product::viewAll();
-
-if(!empty($result)){
-    foreach($result as $product){
-
-        $id = $product['id'];
-        $product_name= $product['product_name'];
-        $price = $product['price'];
-        $details = $product['details'];
-        $category = $product['category'];
-        $subcategory = $product['subcategory'];
-        $dateAdded = $product['date_added'];
-
-        $productList[]= "<td>$id</td><td>$product_name</td><td>$price</td><td>$details</td><td>$category</td><td>$subcategory</td><td>$dateAdded</td>";
-    }
-
-}else{
-    $productList[]= "There are no products in the inventory to be listed.";
-}
-
-/******************* ADD PRODUCT FORM PROCESSING ****************************/
-if(isset($_POST['productName'])){
-
-    $product = new product;
-
-    $product->productName = $db->escape_string($_POST['productName']);
-    $product->price = $db->escape_string($_POST['price']);
-    $product->details = $db->escape_string($_POST['details']);
-    $product->category = $db->escape_string($_POST['category']);
-    $product->subcategory = $db->escape_string($_POST['subcategory']);
-
-    $product->insert();
-    header('location:inventory_list.php');
-
-}
 ?>
 
 
@@ -63,6 +18,11 @@ if(isset($_POST['productName'])){
     <link rel= "stylesheet" href="../styles/styles.css" type="text/css" />
 
     <title>Inventory</title>
+
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <script src="../js/jquery-1.11.3.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <div align="right">
@@ -73,9 +33,11 @@ if(isset($_POST['productName'])){
 
     <p>Inventory List: </p>
     <br/>
-    <table>
+
+    <table class="table table-striped" id="table">
         <thead>
-        <tr>
+        <tr class="success">
+            <th>Photo</th>
             <th>ID</th>
             <th>Name</th>
             <th>Price</th>
@@ -83,31 +45,27 @@ if(isset($_POST['productName'])){
             <th>Category</th>
             <th>SubCategory</th>
             <th>Date Added</th>
+            <th>Keywords</th>
             <th></th>
             <th></th>
+
+
         </tr>
         </thead>
-        <tbody>
-    <?php
-    foreach($productList as $item){
-        echo "<tr>";
-        echo $item . "<td><button name = 'editProduct' class=\"button\" value = 'Edit'>Edit</button></td>  <td> <button name = 'editProduct' class=\"button\" value = 'Edit'>Delete</button></td>";
-        echo "</tr>";
-    }
-    ?>
+        <tbody id="result">
         </tbody>
     </table>
 
+
     <a name="inventoryForm" id="inventoryForm"></a>
     <div class="form">
-        <form enctype="multipart/form-data" method="post" >
+        <form action="inventory_process.php" enctype="multipart/form-data" method="post" >
             <h1>Product Details</h1>
-                <legend><span class="number">+</span> Product Info</legend>
-                <input type="text" name="productName" placeholder="Product Name">
+                <input type="text" id="productName" name="productName" placeholder="Product Name">
                 <br />
-                <input type="text" name="price" placeholder="Price">
+                <input type="text" id="price" name="price" placeholder="Price">
                 <br /><br />
-                <select name="category">
+                <select id="category" name="category">
                     <option >-- Category --</option>
                     <optgroup label="iPhone">
                         <option value="OS">iPhone 6 plus</option>
@@ -125,7 +83,7 @@ if(isset($_POST['productName'])){
                         <option value="SD">New MacBook</option>
                     </optgroup>
                 </select>
-                <select name="subcategory">
+                <select id="subcategory" name="subcategory">
                     <option >-- SubCategory --</option>
                     <optgroup label="iPhone">
                         <option value="OS">iPhone 6 plus</option>
@@ -145,16 +103,18 @@ if(isset($_POST['productName'])){
                 </select>
                 <input type="file" name="photo" id="photo" />
                 <br />
-                <textarea cols="10" rows="10" name="details" placeholder= "Enter product details and description here..."></textarea>
+                <input type="text" id="keywords" name="keywords" placeholder="Keywards" size="60" required>
+                <textarea cols="10" rows="10" id="details" name="details" placeholder= "Enter product details and description here..."></textarea>
                 <br />
 
             <br />
 
-            <button type="submit" class="button">Add Product</button>
+            <button type="submit" id="submit" class="button">Add Product</button>
         </form>
     </div>
 
 
 </div>
+<script src="../scripts/main.js"></script>
 </body>
 </html>

@@ -8,6 +8,8 @@ class Product{
     var $details;
     var $category;
     var $subcategory;
+	var $photo;
+    var $keywords;
 
 	public function __construct($id=-1) {
         global $db;
@@ -21,6 +23,8 @@ class Product{
 			$this->details = $product['details'];
 			$this->category = $product['category'];
             $this->subcategory = $product['subcategory'];
+            $this->photo = $product['photo'];
+            $this->keywords = $product['keywords'];
 		}
 
 	}
@@ -33,10 +37,10 @@ class Product{
         $rows = $db->num_rows($sql);
 
         if($rows > 0){
-            echo "Invalid, You are trying to add a product that already exists.";
+//            echo json_encode("Invalid, You are trying to add a product that already exists.");
             exit();
         }else {
-            $query = "INSERT INTO product VALUES(NULL,'$this->productName','$this->price','$this->details','$this->category','$this->subcategory',now())";
+            $query = "INSERT INTO product VALUES(NULL,'$this->productName','$this->price','$this->details','$this->category','$this->subcategory',now(),'$this->photo','$this->keywords')";
             $db->query($query) or die("Error adding the Product");
             return $db->insert_id();
         }

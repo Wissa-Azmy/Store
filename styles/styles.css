@@ -182,6 +182,10 @@ a:visited
 {
     border-spacing: 10px;
 }
+table
+{
+    border-spacing: 10px;
+}
 .form a
 {
     color: grey;
