@@ -7,5 +7,11 @@
       <schema-pattern>store.*</schema-pattern>
       <default-schemas>store.*</default-schemas>
     </data-source>
+    <data-source name="MySQL - jdbc:mysql://localhost:3306/online store" uuid="27fb6e95-4998-41b9-b8e0-c9c60fe36879">
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <schema-pattern>online&amp;nbsp;store.*</schema-pattern>
+      <default-schemas>online&amp;nbsp;store.*</default-schemas>
+    </data-source>
   </component>
 </project>

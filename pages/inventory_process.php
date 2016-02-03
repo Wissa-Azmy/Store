@@ -43,7 +43,7 @@ if(!empty($result)){
         $productItem .= "<td>$keywords</td>";
         $productItem .= "<td>$qty</td>";
         $productItem .= "<td>
-             <button class='edit btn btn-primary btn-lg' value='$id'>Edit</button>
+             <a href='#inventoryForm'><button class='edit btn btn-primary btn-lg' value='$id'>Edit</button></a>
         </td>
         <td>
              <button class='delete btn btn-primary btn-lg' value='$id'>Delete</button>
@@ -63,7 +63,8 @@ if(!empty($result)){
 
 /******************* ADD PRODUCT, FORM PROCESSING ****************************/
 
-if(isset($_POST['productName'])){
+if((!isset($_GET['update'])) && isset($_POST['productName'])){
+    echo " inside the insert function";
 
     $product = new product;
 
@@ -95,24 +96,34 @@ if(isset($_REQUEST['del'])){
 
 /******************* Edit PRODUCT ****************************/
 
-//if(isset($_REQUEST['edit'])){
-////    echo $_GET['id'] . " inside the Delete function";
-//    $id = $db->escape_string($_REQUEST['del']);
-//    $product = new product($id);
-//
-//    $id = $product->id;
-//    $product_name= $product->productName;
-//    $price = $product->price;
-//    $details = $product->details;
-//    $category = $product->category;
-//    $subcategory = $product->subcategory;
-//    $dateAdded = $product->dateAdded;
-//    $photo = $product->photo;
-//    $keywords = $product->keywords;
-//    $qty = $product->qty;
-//
-//    $product->update();
-//}
+if(isset($_REQUEST['edit'])){
+    $id = $db->escape_string($_REQUEST['edit']);
+    $product = new product($id);
+
+    $id = $product->id;
+    $product_name= $product->productName;
+    $price = $product->price;
+    $details = $product->details;
+    $category = $product->category;
+    $subcategory = $product->subcategory;
+    $dateAdded = $product->dateAdded;
+    $photo = $product->photo;
+    $keywords = $product->keywords;
+    $qty = $product->qty;
+
+    $p_data = [$id, $product_name, $price, $details, $category, $subcategory, $dateAdded, $photo, $keywords, $qty];
+    echo json_encode($p_data);
+    die();
+}
+
+if(isset($_GET['update']) && isset($_POST['productName'])){
+    echo " inside the update function";
+
+    $id = $db->escape_string($_GET['update']);
+    $product = new product($id);
+
+    $product->update();
+}
 
 viewProducts();
 

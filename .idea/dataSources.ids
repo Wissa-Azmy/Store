@@ -174,4 +174,211 @@
       </key>
     </database-model>
   </data-source>
+  <data-source name="MySQL - jdbc:mysql://localhost:3306/online store" uuid="27fb6e95-4998-41b9-b8e0-c9c60fe36879">
+    <database-info product="MySQL" version="5.5.42" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="mixed" quoted-identifiers="upper"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.4">
+      <schema id="1" name="online store"/>
+      <table id="2" parent="1" name="admin"/>
+      <table id="3" parent="1" name="brand"/>
+      <table id="4" parent="1" name="cart"/>
+      <table id="5" parent="1" name="category"/>
+      <table id="6" parent="1" name="customer"/>
+      <table id="7" parent="1" name="product"/>
+      <column id="8" parent="2" name="id">
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="9" parent="2" name="username">
+        <data-type>text</data-type>
+      </column>
+      <column id="10" parent="2" name="password">
+        <data-type>text</data-type>
+      </column>
+      <column id="11" parent="2" name="registration_date">
+        <data-type>text</data-type>
+      </column>
+      <column id="12" parent="2" name="last_log_date">
+        <data-type>text</data-type>
+      </column>
+      <column id="13" parent="2" name="photo">
+        <data-type>text</data-type>
+      </column>
+      <column id="14" parent="3" name="brand_id">
+        <mandatory>1</mandatory>
+        <data-type>int(100)</data-type>
+      </column>
+      <column id="15" parent="3" name="brand_title">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <key id="16" parent="3" name="PRIMARY">
+        <columns>brand_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="17" parent="4" name="p_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="18" parent="4" name="cust_id">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+      </column>
+      <column id="19" parent="4" name="qty">
+        <mandatory>1</mandatory>
+        <data-type>int(10)</data-type>
+      </column>
+      <key id="20" parent="4" name="PRIMARY">
+        <columns>p_id
+cust_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="21" parent="5" name="cat_id">
+        <mandatory>1</mandatory>
+        <data-type>int(100)</data-type>
+      </column>
+      <column id="22" parent="5" name="cat_title">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <key id="23" parent="5" name="PRIMARY">
+        <columns>cat_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="24" parent="6" name="cust_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="25" parent="6" name="cust_name">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="26" parent="6" name="cust_username">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="27" parent="6" name="cust_email">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="28" parent="6" name="cust_birthdate">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="29" parent="6" name="cust_country">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="30" parent="6" name="cust_city">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="31" parent="6" name="cust_contact">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="32" parent="6" name="cust_image">
+        <mandatory>1</mandatory>
+        <data-type>text</data-type>
+      </column>
+      <column id="33" parent="6" name="cust_password">
+        <mandatory>1</mandatory>
+        <data-type>char(41)</data-type>
+      </column>
+      <column id="34" parent="6" name="cust_job">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="35" parent="6" name="cust_address">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="36" parent="6" name="cust_interests">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="37" parent="6" name="cust_creditLimit">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="38" parent="6" name="admin_user">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="39" parent="6" name="cust_reg_date">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <key id="40" parent="6" name="PRIMARY">
+        <columns>cust_id</columns>
+        <primary>1</primary>
+      </key>
+      <column id="41" parent="7" name="p_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="42" parent="7" name="cat_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="43" parent="7" name="brand_id">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="44" parent="7" name="p_title">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="45" parent="7" name="p_price">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="46" parent="7" name="p_desc">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="47" parent="7" name="p_img">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="48" parent="7" name="p_keywords">
+        <mandatory>1</mandatory>
+        <data-type>varchar(255)</data-type>
+      </column>
+      <column id="49" parent="7" name="p_date_added">
+        <mandatory>1</mandatory>
+        <data-type>date</data-type>
+      </column>
+      <column id="50" parent="7" name="p_qty">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <index id="51" parent="7" name="brand_id_fk">
+        <columns>brand_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <index id="52" parent="7" name="cat_id_fk">
+        <columns>cat_id</columns>
+        <desc-columns></desc-columns>
+      </index>
+      <key id="53" parent="7" name="PRIMARY">
+        <columns>p_id</columns>
+        <primary>1</primary>
+      </key>
+      <foreign-key id="54" parent="7" name="brand_id_fk">
+        <columns>brand_id</columns>
+        <ref-key>~.brand.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+      <foreign-key id="55" parent="7" name="cat_id_fk">
+        <columns>cat_id</columns>
+        <ref-key>~.category.PRIMARY</ref-key>
+        <cascade-update-rule>restrict</cascade-update-rule>
+        <cascade-delete-rule>restrict</cascade-delete-rule>
+      </foreign-key>
+    </database-model>
+  </data-source>
 </component>

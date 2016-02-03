@@ -7,7 +7,7 @@ var subcategory = $('#subcategory');
 var photo = $('#photo');
 var keywords = $('#keywords');
 var edit = $('#edit');
-//var delbtn = $('.delete');
+var updbtn = $('#update');
 
 
 var xhr = new XMLHttpRequest();
@@ -55,6 +55,30 @@ console.log(event);
         });
 });
 
+$('form').on('click','#update', function(event) {
+    event.preventDefault();
+    alert("edit clicked "+btnval);
+    btnval = $(this).val();
+
+    $.ajax({
+            url: '../pages/inventory_process.php?update='+btnval,
+            type: 'GET'
+            //data: {productName: productName.val(), price: price.val(), details: details.val(), category: category.val(), subcategory: subcategory.val(), photo: photo.val(), keywords: keywords.val()}
+        })
+        .success(function(event) {
+            console.log(event);
+            table = JSON.parse(event);
+
+            var result = $('#result');
+            result.html(table);
+
+        })
+
+        .always(function() {
+            console.log("update completed");
+        });
+});
+
 
 $('table').on('click','.delete', function(event) {
     event.preventDefault();
@@ -84,11 +108,8 @@ $('table').on('click','.delete', function(event) {
 var btnval;
 
 $('table').on('click','.edit', function(event) {
-    event.preventDefault();
 
     btnval = $(this).val();
-
-    alert('editBtn clicked '+btnval);
 
     $.ajax({
 
@@ -99,13 +120,18 @@ $('table').on('click','.edit', function(event) {
             console.log(event);
 
             table = JSON.parse(event);
-            var result = $('#result');
-            result.html(table);
+            productName.val(table[1]);
+            price.val(table[2]);
+            //photo.val(table[5]);
+            keywords.val(table[8]);
+            details.val(table[3]);
+            sub.attr('id','update');
+            sub.attr('value', btnval);
 
         })
 
         .always(function() {
-            console.log("deletion completed");
+            console.log("view edit completed");
         });
 
 });

@@ -54,7 +54,7 @@ class Product{
 
 	function update() {
         global $db;
-		$query = "UPDATE product SET product_name='$this->productName', price='$this->price', details='$this->details', category='$this->category', subcategory='$this->subcategory' where id=$this->id";
+		$query = "UPDATE product SET p_title='$this->productName', p_price='$this->price', p_desc='$this->details', cat_id='$this->category', brand_id='$this->subcategory', p_keywords='$this->keywords', p_qty='$this->qty' where p_id=$this->id";
 		$db->query($query);
 	}
 

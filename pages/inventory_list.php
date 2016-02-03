@@ -9,6 +9,7 @@ require "../scripts/db-connect.php";
 
 require 'session_validation.php';
 
+
 ?>
 
 
@@ -51,8 +52,6 @@ require 'session_validation.php';
             <th>Quantity</th>
             <th></th>
             <th></th>
-
-
         </tr>
         </thead>
         <tbody id="result">
