@@ -59,9 +59,11 @@ if(isset($_POST['productName'])){
 </head>
 <body>
 <div align="right">
-    <a href="admin_logout.php" rel="Log out">Log out</a>
+    <a href="admin_logout.php" rel="Log out" class="menu">Log out</a>
 </div>
 <div align="center" id="main">
+    <a href="inventory_list.php" class="menu">Inventory</a>
+
     <a href="#inventoryForm" class="menu">+ Add User</a>
 
     <p>Admin Users: </p>

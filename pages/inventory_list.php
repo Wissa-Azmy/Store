@@ -29,6 +29,8 @@ require 'session_validation.php';
     <a href="admin_logout.php" class="menu">Log out</a>
 </div>
 <div align="center" id="main">
+    <a href="user_list.php" class="menu">Users</a>
+
     <a href="#inventoryForm" class="menu">+ Add Products</a>
 
     <p>Inventory List: </p>
