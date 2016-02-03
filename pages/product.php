@@ -10,30 +10,32 @@ class Product{
     var $subcategory;
 	var $photo;
     var $keywords;
+	var $qty;
 
 	public function __construct($id=-1) {
         global $db;
 		if($id!=-1) { // To view only one product by id if it's sent with the constructor.
-			$query = "SELECT * FROM product WHERE id=$id LIMIT 1";
+			$query = "SELECT * FROM product WHERE p_id=$id LIMIT 1";
 
 			$result = $db->query($query);
 			$product = $db->fetch_assoc($result);
 
-            $this->id = $product['id'];
-            $this->productName = $product['name'];
-			$this->price = $product['price'];
-			$this->details = $product['details'];
-			$this->category = $product['category'];
-            $this->subcategory = $product['subcategory'];
-            $this->photo = $product['photo'];
-            $this->keywords = $product['keywords'];
+            $this->id = $product['p_id'];
+            $this->productName = $product['p_title'];
+			$this->price = $product['p_price'];
+			$this->details = $product['p_desc'];
+			$this->category = $product['cat_id'];
+            $this->subcategory = $product['brand_id'];
+            $this->photo = $product['p_img'];
+            $this->keywords = $product['p_keywords'];
+			$this->qty = $product['p_qty'];
 		}
 
 	}
 
 	function insert() {
         global $db;
-        $query = "SELECT * FROM product WHERE product_name LIKE '$this->productName'";
+        $query = "SELECT * FROM product WHERE p_title LIKE '$this->productName'";
         $sql = $db->query($query);
 
         $rows = $db->num_rows($sql);
@@ -42,7 +44,7 @@ class Product{
 //            echo json_encode("Invalid, You are trying to add a product that already exists.");
             exit();
         }else {
-            $query = "INSERT INTO product VALUES(NULL,'$this->productName','$this->price','$this->details','$this->category','$this->subcategory',now(),'$this->photo','$this->keywords')";
+            $query = "INSERT INTO product VALUES(NULL,'$this->category','$this->subcategory','$this->productName','$this->price','$this->details','$this->photo','$this->keywords',now(),'$this->qty')";
             $db->query($query) or die("Error adding the Product");
             return $db->insert_id();
         }
@@ -56,7 +58,7 @@ class Product{
 
 	function delete() {
         global $db;
-		$query = "DELETE FROM product WHERE id=$this->id";
+		$query = "DELETE FROM product WHERE p_id=$this->id";
 		$db->query($query);
 	}
 

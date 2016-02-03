@@ -23,15 +23,15 @@ $result = product::viewAll();
 if(!empty($result)){
     foreach($result as $product){
 
-        $id = $product['id'];
-        $product_name= $product['product_name'];
-        $price = $product['price'];
-        $details = $product['details'];
-        $category = $product['category'];
-        $subcategory = $product['subcategory'];
-        $dateAdded = $product['date_added'];
-        $photo = $product['photo'];
-        $keywords = $product['keywords'];
+        $id = $product['p_id'];
+        $product_name= $product['p_title'];
+        $price = $product['p_price'];
+        $details = $product['p_desc'];
+        $category = $product['cat_id'];
+        $subcategory = $product['brand_id'];
+        $dateAdded = $product['p_date_added'];
+        $photo = $product['p_img'];
+        $keywords = $product['p_keywords'];
 
         $productItem = "<tr class='row'></tr><td><img src='../images/$photo' width='200' height='200'> </td>";
         $productItem .= "<td>$id</td><td>$product_name</td>";

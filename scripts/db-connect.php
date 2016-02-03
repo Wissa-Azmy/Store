@@ -10,7 +10,7 @@ class MySQL_connect {
     }
 
     public function openConnection(){
-        $this->connection = mysqli_connect("localhost","root","root","store") or die("Connection to the Database Failed.");
+        $this->connection = mysqli_connect("localhost","root","root","online store") or die("Connection to the Database Failed.");
     }
 
     public function query($sql) {
