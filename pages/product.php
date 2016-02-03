@@ -9,6 +9,7 @@ class Product{
     var $category;
     var $subcategory;
 	var $photo;
+	var $dateAdded;
     var $keywords;
 	var $qty;
 
@@ -26,7 +27,8 @@ class Product{
 			$this->details = $product['p_desc'];
 			$this->category = $product['cat_id'];
             $this->subcategory = $product['brand_id'];
-            $this->photo = $product['p_img'];
+			$this->dateAdded = $product['p_date_added'];
+			$this->photo = $product['p_img'];
             $this->keywords = $product['p_keywords'];
 			$this->qty = $product['p_qty'];
 		}

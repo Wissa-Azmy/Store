@@ -48,6 +48,7 @@ require 'session_validation.php';
             <th>SubCategory</th>
             <th>Date Added</th>
             <th>Keywords</th>
+            <th>Quantity</th>
             <th></th>
             <th></th>
 

@@ -17,7 +17,6 @@ $( window ).load(function() {
             url: '../pages/inventory_process.php',
             type: 'GET'
             // dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
-            //data: {productName: productName.val(), price: price.val(), details: details.val(), category: category.val(), subcategory: subcategory.val(), photo: photo.val(), keywords: keywords.val()}
         })
         .success(function(event) {
 
@@ -40,7 +39,6 @@ sub.on('click', function(event) {
     $.ajax({
             url: '../pages/inventory_process.php',
             type: 'POST',
-            // dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
             data: {productName: productName.val(), price: price.val(), details: details.val(), category: category.val(), subcategory: subcategory.val(), photo: photo.val(), keywords: keywords.val()}
         })
         .success(function(event) {
@@ -57,7 +55,6 @@ console.log(event);
         });
 });
 
-var btnval;
 
 $('table').on('click','.delete', function(event) {
     event.preventDefault();
@@ -66,10 +63,37 @@ $('table').on('click','.delete', function(event) {
 
     $.ajax({
 
-    url: '../pages/inventory_process.php?id='+btnval,
+            url: '../pages/inventory_process.php?del='+btnval,
             type: 'GET'
-            // dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
-            //data: {productName: productName.val(), price: price.val(), details: details.val(), category: category.val(), subcategory: subcategory.val(), photo: photo.val(), keywords: keywords.val()}
+        })
+        .success(function(event) {
+            console.log(event);
+
+            table = JSON.parse(event);
+            var result = $('#result');
+            result.html(table);
+
+        })
+
+        .always(function() {
+            console.log("deletion completed");
+        });
+
+});
+
+var btnval;
+
+$('table').on('click','.edit', function(event) {
+    event.preventDefault();
+
+    btnval = $(this).val();
+
+    alert('editBtn clicked '+btnval);
+
+    $.ajax({
+
+            url: '../pages/inventory_process.php?edit='+btnval,
+            type: 'GET'
         })
         .success(function(event) {
             console.log(event);

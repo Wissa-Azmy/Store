@@ -11,10 +11,12 @@ require "../scripts/db-connect.php";
 require 'product.php';
 
 /************** ERROR REPORTING. *******************/
+
 error_reporting(E_ALL);  // set the php.ini config. file to dispaly all the errors
 ini_set('error_display','1');
 
 /************** VIEW PRODUCT LIST ******************/
+
 function viewProducts(){
 $productList = [];
 
@@ -32,12 +34,14 @@ if(!empty($result)){
         $dateAdded = $product['p_date_added'];
         $photo = $product['p_img'];
         $keywords = $product['p_keywords'];
+        $qty = $product['p_qty'];
 
         $productItem = "<tr class='row'></tr><td><img src='../images/$photo' width='200' height='200'> </td>";
         $productItem .= "<td>$id</td><td>$product_name</td>";
         $productItem .= "<td>$price</td><td>$details</td><td>$category</td>";
         $productItem .= "<td>$subcategory</td><td>$dateAdded</td>";
         $productItem .= "<td>$keywords</td>";
+        $productItem .= "<td>$qty</td>";
         $productItem .= "<td>
              <button class='edit btn btn-primary btn-lg' value='$id'>Edit</button>
         </td>
@@ -58,6 +62,7 @@ if(!empty($result)){
 }
 
 /******************* ADD PRODUCT, FORM PROCESSING ****************************/
+
 if(isset($_POST['productName'])){
 
     $product = new product;
@@ -70,9 +75,7 @@ if(isset($_POST['productName'])){
     $product->keywords = $db->escape_string($_POST['keywords']);
 
     $product->photo = ($_FILES['photo']['name']);
-//    echo "<pre>";
-//    var_dump($_FILES['photo']);
-//    echo "</pre>";
+
     $photo_tmp = $_FILES['photo']['tmp_name'];
     move_uploaded_file($photo_tmp, "../images/$product->photo");
 
@@ -83,12 +86,34 @@ if(isset($_POST['productName'])){
 
 /******************* DELETE PRODUCT ****************************/
 
-if(isset($_REQUEST['id'])){
+if(isset($_REQUEST['del'])){
 //    echo $_GET['id'] . " inside the Delete function";
-    $id = $db->escape_string($_REQUEST['id']);
+    $id = $db->escape_string($_REQUEST['del']);
     $product = new product($id);
     $product->delete();
 }
+
+/******************* Edit PRODUCT ****************************/
+
+//if(isset($_REQUEST['edit'])){
+////    echo $_GET['id'] . " inside the Delete function";
+//    $id = $db->escape_string($_REQUEST['del']);
+//    $product = new product($id);
+//
+//    $id = $product->id;
+//    $product_name= $product->productName;
+//    $price = $product->price;
+//    $details = $product->details;
+//    $category = $product->category;
+//    $subcategory = $product->subcategory;
+//    $dateAdded = $product->dateAdded;
+//    $photo = $product->photo;
+//    $keywords = $product->keywords;
+//    $qty = $product->qty;
+//
+//    $product->update();
+//}
+
 viewProducts();
 
 /* BootStrap Create DropDown menu Button
