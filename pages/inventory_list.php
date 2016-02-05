@@ -46,7 +46,7 @@ require 'session_validation.php';
             <th>Price</th>
             <th>Details</th>
             <th>Category</th>
-            <th>SubCategory</th>
+            <th>Brand</th>
             <th>Date Added</th>
             <th>Keywords</th>
             <th>Quantity</th>
@@ -61,7 +61,7 @@ require 'session_validation.php';
 
     <a name="inventoryForm" id="inventoryForm"></a>
     <div class="form">
-        <form action="inventory_process.php" enctype="multipart/form-data" method="post" >
+        <form enctype="multipart/form-data">
             <h1>Product Details</h1>
                 <input type="text" id="productName" name="productName" placeholder="Product Name">
                 <br />
@@ -70,37 +70,37 @@ require 'session_validation.php';
                 <select id="category" name="category">
                     <option >-- Category --</option>
                     <optgroup label="iPhone">
-                        <option value="OS">iPhone 6 plus</option>
-                        <option value="EL">iPhone 6</option>
-                        <option value="SD">iPhone 5</option>
+                        <option value="1">iPhone 6 plus</option>
+                        <option value="2">iPhone 6</option>
+                        <option value="3">iPhone 5</option>
                     </optgroup>
                     <optgroup label="iPad">
-                        <option value="OS">iPad Pro</option>
-                        <option value="EL">iPad Air 2</option>
-                        <option value="SD">iPad Air</option>
+                        <option value="1">iPad Pro</option>
+                        <option value="2">iPad Air 2</option>
+                        <option value="3">iPad Air</option>
                     </optgroup>
                     <optgroup label="MacBook">
-                        <option value="OS">MacBook Pro</option>
-                        <option value="EL">MacBook Air</option>
-                        <option value="SD">New MacBook</option>
+                        <option value="1">MacBook Pro</option>
+                        <option value="2">MacBook Air</option>
+                        <option value="3">New MacBook</option>
                     </optgroup>
                 </select>
                 <select id="subcategory" name="subcategory">
                     <option >-- SubCategory --</option>
                     <optgroup label="iPhone">
-                        <option value="OS">iPhone 6 plus</option>
-                        <option value="EL">iPhone 6</option>
-                        <option value="SD">iPhone 5</option>
+                        <option value="1">iPhone 6 plus</option>
+                        <option value="2">iPhone 6</option>
+                        <option value="3">iPhone 5</option>
                     </optgroup>
                     <optgroup label="iPad">
-                        <option value="OS">iPad Pro</option>
-                        <option value="EL">iPad Air 2</option>
-                        <option value="SD">iPad Air</option>
+                        <option value="1">iPad Pro</option>
+                        <option value="2">iPad Air 2</option>
+                        <option value="3">iPad Air</option>
                     </optgroup>
                     <optgroup label="MacBook">
-                        <option value="OS">MacBook Pro</option>
-                        <option value="EL">MacBook Air</option>
-                        <option value="SD">New MacBook</option>
+                        <option value="1">MacBook Pro</option>
+                        <option value="2">MacBook Air</option>
+                        <option value="3">New MacBook</option>
                     </optgroup>
                 </select>
                 <input type="file" name="photo" id="photo" />
@@ -111,10 +111,9 @@ require 'session_validation.php';
 
             <br />
 
-            <button type="submit" id="submit" class="button">Add Product</button>
+            <button id="submit" class="button">Add Product</button>
         </form>
     </div>
-    <form action="../pages/inventory_process.php"
 
 </div>
 <script src="../scripts/main.js"></script>

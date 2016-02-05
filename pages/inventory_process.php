@@ -63,32 +63,35 @@ if(!empty($result)){
 
 /******************* ADD PRODUCT, FORM PROCESSING ****************************/
 
-if((!isset($_GET['update'])) && isset($_POST['productName'])){
-    echo " inside the insert function";
+if(isset($_REQUEST['add']) ) {
 
-    $product = new product;
+    if (isset($_POST['productName'])) {
+        echo " inside the insert function";
 
-    $product->productName = $db->escape_string($_POST['productName']);
-    $product->price = $db->escape_string($_POST['price']);
-    $product->details = $db->escape_string($_POST['details']);
-    $product->category = $db->escape_string($_POST['category']);
-    $product->subcategory = $db->escape_string($_POST['subcategory']);
-    $product->keywords = $db->escape_string($_POST['keywords']);
+        $product = new product;
 
-    $product->photo = ($_FILES['photo']['name']);
+        $product->productName = $db->escape_string($_POST['productName']);
+        $product->price = $db->escape_string($_POST['price']);
+        $product->details = $db->escape_string($_POST['details']);
+        $product->category = $db->escape_string($_POST['category']);
+        $product->subcategory = $db->escape_string($_POST['subcategory']);
+        $product->keywords = $db->escape_string($_POST['keywords']);
 
-    $photo_tmp = $_FILES['photo']['tmp_name'];
-    move_uploaded_file($photo_tmp, "../images/$product->photo");
+        $product->photo = ($_FILES['photo']['name']);
 
-   // Form Validation Requiered in advance.
+        $photo_tmp = $_FILES['photo']['tmp_name'];
+        move_uploaded_file($photo_tmp, "../images/$product->photo");
+
+        // Form Validation Requiered in advance.
         $product->insert();
 //        header('location:inventory_list.php');
+    }
 }
 
 /******************* DELETE PRODUCT ****************************/
 
 if(isset($_REQUEST['del'])){
-//    echo $_GET['id'] . " inside the Delete function";
+//    echo "inside the Delete function";
     $id = $db->escape_string($_REQUEST['del']);
     $product = new product($id);
     $product->delete();
@@ -115,13 +118,30 @@ if(isset($_REQUEST['edit'])){
     echo json_encode($p_data);
     die();
 }
-
-if(isset($_GET['update']) && isset($_POST['productName'])){
-    echo " inside the update function";
+//&& isset($_POST['productName'])
+if(isset($_REQUEST['update']) ){
+//    echo " inside the update function";
 
     $id = $db->escape_string($_GET['update']);
     $product = new product($id);
 
+if (isset($_POST['productName'])) {
+
+    $product = new product;
+
+    $product->productName = $db->escape_string($_POST['productName']);
+    $product->price = $db->escape_string($_POST['price']);
+    $product->details = $db->escape_string($_POST['details']);
+    $product->category = $db->escape_string($_POST['category']);
+    $product->subcategory = $db->escape_string($_POST['subcategory']);
+    $product->keywords = $db->escape_string($_POST['keywords']);
+
+    $product->photo = ($_FILES['photo']['name']);
+
+    $photo_tmp = $_FILES['photo']['tmp_name'];
+    move_uploaded_file($photo_tmp, "../images/$product->photo");
+}
+//    echo "$product->productName $product->price $product->details $product->category $product->subcategory $product->keywords";
     $product->update();
 }
 
