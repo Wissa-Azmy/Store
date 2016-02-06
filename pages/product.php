@@ -31,7 +31,8 @@ class Product{
 			$this->photo = $product['p_img'];
             $this->keywords = $product['p_keywords'];
 			$this->qty = $product['p_qty'];
-		}
+
+        }
 
 	}
 

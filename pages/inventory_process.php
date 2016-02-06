@@ -127,7 +127,7 @@ if(isset($_REQUEST['update']) ){
 
 if (isset($_POST['productName'])) {
 
-    $product = new product;
+//    $product = new product;
 
     $product->productName = $db->escape_string($_POST['productName']);
     $product->price = $db->escape_string($_POST['price']);
