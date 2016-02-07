@@ -83,7 +83,7 @@ if(isset($_REQUEST['add']) ) {
         $photo_tmp = $_FILES['photo']['tmp_name'];
         move_uploaded_file($photo_tmp, "../images/$product->photo");
 
-            print_r($_POST);
+//            print_r($_POST);
 
         // Form Validation Requiered in advance.
         $product->insert();
