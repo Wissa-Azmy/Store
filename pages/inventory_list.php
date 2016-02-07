@@ -32,7 +32,7 @@ require 'session_validation.php';
 <div align="center" id="main">
     <a href="user_list.php" class="menu">Users</a>
 
-    <a href="#inventoryForm" class="menu">+ Add Products</a>
+    <a href="#inventoryForm" class="menu" id="addProductBtn">+ Add Products</a>
 
     <p>Inventory List: </p>
     <br/>
@@ -60,7 +60,7 @@ require 'session_validation.php';
 
 
     <a name="inventoryForm" id="inventoryForm"></a>
-    <div class="form">
+    <div class="form hidden" id="addProductForm">
         <form enctype="multipart/form-data">
             <h1>Product Details</h1>
                 <input type="text" id="productName" name="productName" placeholder="Product Name">

@@ -12,7 +12,8 @@ class admin{
 			$query = "SELECT * FROM admin WHERE id=$id LIMIT 1";
 			$result = $db->query($query);
 			$admin = $db->fetch_assoc($result);
-            
+
+			$this->id = $admin['id'];
             $this->userName = $admin['username'];
 			$this->password = $admin['password'];
 		}

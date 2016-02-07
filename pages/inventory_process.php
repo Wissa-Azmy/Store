@@ -66,7 +66,7 @@ if(!empty($result)){
 if(isset($_REQUEST['add']) ) {
 
     if (isset($_POST['productName'])) {
-        echo " inside the insert function";
+//        echo " inside the insert function";
 
         $product = new product;
 
@@ -76,11 +76,14 @@ if(isset($_REQUEST['add']) ) {
         $product->category = $db->escape_string($_POST['category']);
         $product->subcategory = $db->escape_string($_POST['subcategory']);
         $product->keywords = $db->escape_string($_POST['keywords']);
+        $product->photo = $db->escape_string($_POST['photo']);
 
-        $product->photo = ($_FILES['photo']['name']);
+//        $product->photo = ($_FILES['photo']['name']);
 
         $photo_tmp = $_FILES['photo']['tmp_name'];
         move_uploaded_file($photo_tmp, "../images/$product->photo");
+
+            print_r($_POST);
 
         // Form Validation Requiered in advance.
         $product->insert();
@@ -140,6 +143,7 @@ if (isset($_POST['productName'])) {
 
     $photo_tmp = $_FILES['photo']['tmp_name'];
     move_uploaded_file($photo_tmp, "../images/$product->photo");
+//    echo $product->photo;
 }
 //    echo "$product->productName $product->price $product->details $product->category $product->subcategory $product->keywords";
     $product->update();

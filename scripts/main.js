@@ -7,10 +7,11 @@ var subcategory = $('#subcategory');
 var photo = $('#photo');
 var keywords = $('#keywords');
 var edit = $('#edit');
+var addProductForm = $('#addProductForm');
+var addProductBtn = $('#addProductBtn');
 var btnval;
 
 //var updbtn = $('#update');
-
 
 var xhr = new XMLHttpRequest();
 
@@ -34,6 +35,20 @@ $( window ).load(function() {
         });
 });
 
+addProductBtn.click(function(){
+
+    $.ajax({    })
+        .success(function(event) {
+
+            addProductForm.removeClass('hidden');
+            addProductForm.addClass('show');
+
+        })
+
+        .always(function() {
+            console.log("add product from load completed");
+        });
+});
 
 sub.on('click', function(event) {
     event.preventDefault();
@@ -67,7 +82,7 @@ sub.on('click', function(event) {
             });
 
     }else {
-        alert("submit clicked");
+        //alert("submit clicked");
 
         $.ajax({
                 url: '../pages/inventory_process.php?add=1',
