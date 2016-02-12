@@ -17,26 +17,26 @@ require 'session_validation.php';
 <html>
 <head>
     <link rel= "stylesheet" href="../styles/styles.css" type="text/css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
     <title>Inventory</title>
 
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
-    <script src="../js/jquery-1.11.3.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
-
 </head>
 <body>
-<div align="right">
-    <a href="admin_logout.php" class="menu">Log out</a>
-</div>
+<div class="container">
+
 <div align="center" id="main">
-    <a href="user_list.php" class="menu">Users</a>
+    <?php
+    $home = '';
+    $inventory = 'class="active"';
+    $users = '';
+    include_once 'header.php'?>
 
     <a href="#inventoryForm" class="menu" id="addProductBtn">+ Add Products</a>
 
     <p>Inventory List: </p>
     <br/>
-
+    <div class="table-responsive">
     <table class="table table-striped" id="table">
         <thead>
         <tr class="success">
@@ -57,7 +57,7 @@ require 'session_validation.php';
         <tbody id="result">
         </tbody>
     </table>
-
+    </div>
 
     <a name="inventoryForm" id="inventoryForm"></a>
     <div class="form hidden" id="addProductForm">
@@ -116,6 +116,9 @@ require 'session_validation.php';
     </div>
 
 </div>
+    </div>
+<script src="../js/jquery-1.11.3.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
 <script src="../scripts/main.js"></script>
 </body>
 </html>

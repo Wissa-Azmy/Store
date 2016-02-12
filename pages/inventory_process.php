@@ -36,7 +36,7 @@ if(!empty($result)){
         $keywords = $product['p_keywords'];
         $qty = $product['p_qty'];
 
-        $productItem = "<tr class='row'></tr><td><img src='../images/$photo' width='200' height='200'> </td>";
+        $productItem = "<tr class='row'></tr><td><img src='../images/$photo' class='img-responsive' width='200' height='200'> </td>";
         $productItem .= "<td>$id</td><td>$product_name</td>";
         $productItem .= "<td>$price</td><td>$details</td><td>$category</td>";
         $productItem .= "<td>$subcategory</td><td>$dateAdded</td>";

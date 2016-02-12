@@ -43,7 +43,6 @@ if ($existCount == 1) {
 		<title>Admin Login</title>
 	</head>
 	<body>
-    <?php include 'header.php';  ?>
 
     <div align="center" id="main">
 			 <div class="form">

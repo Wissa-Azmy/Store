@@ -162,7 +162,7 @@ DROP TABLE IF EXISTS `product`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `product` (
-  `p_id` int(11) NOT NULL,
+  `p_id` int(11) NOT NULL AUTO_INCREMENT,
   `cat_id` int(11) NOT NULL,
   `brand_id` int(11) NOT NULL,
   `p_title` varchar(255) NOT NULL,
@@ -186,7 +186,7 @@ CREATE TABLE `product` (
 
 LOCK TABLES `product` WRITE;
 /*!40000 ALTER TABLE `product` DISABLE KEYS */;
-INSERT INTO `product` VALUES (1,1,1,'a',100,'this is good product ','download.jpg','laptop','0000-00-00',0);
+INSERT INTO `product` VALUES (1,2,2,'Apple TV',150,'some details','download.jpg','apple product','0000-00-00',2);
 /*!40000 ALTER TABLE `product` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -199,4 +199,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2016-02-03 19:24:04
+-- Dump completed on 2016-02-08 21:29:13
