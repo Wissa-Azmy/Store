@@ -21,10 +21,11 @@ $existCount = $db->num_rows($sql);
 if ($existCount == 1) {
     $row = $db->fetch_assoc($sql);
     $id = $row["id"];
-    $_SESSION['id'] = $id;
 
+    $_SESSION['id'] = $id;
     $_SESSION['manager'] = $adminUser;
     $_SESSION['password'] = $password;
+
     header("location: index.php");
     exit();
 

@@ -29,11 +29,11 @@ if(!empty($result)){
         $photo = $admin['photo'];
         $reg_date = $admin['registration_date'];
 
-        $adminList = "<tr class='row'></tr><td><img src='../images/$photo' class='img-responsive' width='200' height='200'> </td>";
-        $adminList .= "<td>$id</td><td>$name</td>";
-        $adminList .= "<td>$reg_date</td>";
+        $adminUsr = "<tr class='row'></tr><td><img src='../images/$photo' class='img-responsive' width='200' height='200'> </td>";
+        $adminUsr .= "<td>$id</td><td>$name</td>";
+        $adminUsr .= "<td>$reg_date</td>";
 
-        $adminList .= "<td>
+        $adminUsr .= "<td>
              <button class='edit btn btn-primary btn-lg' value='$id'>Edit</button>
         </td>
         <td>
@@ -41,6 +41,7 @@ if(!empty($result)){
 
         </td>
         </tr>";
+        $adminList[]= $adminUsr;
     }
 
 }else{
@@ -102,7 +103,9 @@ if(isset($_POST['productName'])){
                 </tr>
                 </thead>
                 <tbody id="result">
-                    <?php echo $adminList; ?>
+                    <?php foreach($adminList as $user){
+                        echo $user;
+                    } ?>
                 </tbody>
             </table>
         </div>
@@ -112,9 +115,9 @@ if(isset($_POST['productName'])){
         <div class="form">
             <form enctype="multipart/form-data" method="post" >
                 <h1>User Details</h1>
-                    <input type="text" name="productName" placeholder="Product Name">
+                    <input type="text" name="userName" placeholder="User Name">
                     <br />
-                    <input type="text" name="price" placeholder="Price">
+                    <input type="text" name="password" placeholder="Password">
                     <br /><br />
                     <select name="category">
                         <option >-- Category --</option>

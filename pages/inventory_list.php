@@ -47,7 +47,7 @@ require 'session_validation.php';
             <th>Details</th>
             <th>Category</th>
             <th>Brand</th>
-            <th>Date Added</th>
+            <th>Added</th>
             <th>Keywords</th>
             <th>Quantity</th>
             <th></th>
