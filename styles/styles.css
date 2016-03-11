@@ -14,7 +14,38 @@ body
 {
     padding-top: 70px;
     background-color: #f2f2f2;
-    
+
+}
+
+.flyover {
+   left: 150%;
+   overflow: hidden;
+   position: fixed;
+   width: 50%;
+   opacity: 0.9;
+   z-index: 1050;
+   transition: left 0.6s ease-out 0s;
+}
+
+.flyover-centered {
+   top: 50%;
+   transform: translate(-50%, -50%);
+}
+
+.flyover.in {
+   left: 50%;
+}
+
+
+.addBtn{
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+    list-style: none;
 }
 
 .links
@@ -45,59 +76,59 @@ body
     /*border-left: 5px solid  silver;*/
 }
 
-.homeimage 
+.homeimage
 {
     background-image: url(../images/home/apple_collection.jpg);
     background-size:100%;
     background-repeat: no-repeat;
     background-position: center;
-    height: 500px;    
+    height: 500px;
     width: 100%;
     text-align: center;
     color: #2f343b;
 }
-.aboutimage 
+.aboutimage
 {
     background-image: url(../images/home/about.jpg);
     background-size:100%;
     background-repeat: no-repeat;
     background-position: center;
-    height: 500px;    
+    height: 500px;
     width: 100%;
     text-align: center;
     line-height: 130px;
     color: white;
 }
-.ipadimage 
+.ipadimage
 {
     background-image: url(../images/ipad/ipad1.png);
     background-size:100%;
     background-repeat: no-repeat;
     background-position: center;
-    height: 500px;    
+    height: 500px;
     width: 100%;
     text-align: center;
     color: white;
 }
-.tvimage 
+.tvimage
 {
     background-image: url(../images/tv/tv.jpg);
     background-size:100%;
     background-repeat: no-repeat;
     background-position: center;
-    height: 500px;    
+    height: 500px;
     width: 100%;
     text-align: center;
     color: grey;
     line-height: 110px;
 }
-.macimage 
+.macimage
 {
     background-image: url(../images/macbook/macbook.png);
     background-size:100%;
     background-repeat: no-repeat;
     background-position: center;
-    height: 500px;    
+    height: 500px;
     width: 100%;
     text-align: center;
     color: black;
@@ -110,7 +141,7 @@ body
     margin: 20px;
     text-align: left;
 }
-.text 
+.text
 {
     text-align: center;
 }
@@ -191,7 +222,7 @@ table
 {
     color: grey;
 }
-.passlbl 
+.passlbl
 {
     margin-left: 8%;
     text-align: left;
@@ -209,7 +240,7 @@ table
     color: white;
     background: green;
     padding: 3px;
-    border-radius: 100%;  
+    border-radius: 100%;
 }
 legend
 {
@@ -221,7 +252,7 @@ legend
 {
     width: 40%;
     text-align: left;
-    
+
 }
 .images
 {

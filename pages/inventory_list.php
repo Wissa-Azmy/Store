@@ -32,7 +32,7 @@ require 'session_validation.php';
     $users = '';
     include_once 'header.php'?>
 
-    <a href="#inventoryForm" class="menu" id="addProductBtn">+ Add Products</a>
+    <a href="#inventoryForm" class="btn menu addBtn js-jumbo" id="addProductBtn">+ Add Products</a>
 
     <p>Inventory List: </p>
     <br/>
@@ -60,11 +60,12 @@ require 'session_validation.php';
     </div>
 
     <a name="inventoryForm" id="inventoryForm"></a>
-    <div class="form hidden" id="addProductForm">
+
+<div id="message1" class="jumbotron flyover flyover-centered" id="addProductForm">
         <form enctype="multipart/form-data">
-            <h1>Product Details</h1>
+            <h3>Product Details</h3>
                 <input type="text" id="productName" name="productName" placeholder="Product Name">
-                <br />
+                <br /><br />
                 <input type="text" id="price" name="price" placeholder="Price">
                 <br /><br />
                 <select id="category" name="category">
@@ -103,10 +104,12 @@ require 'session_validation.php';
                         <option value="3">New MacBook</option>
                     </optgroup>
                 </select>
+                <br />
                 <input type="file" name="photo" id="photo" />
                 <br />
                 <input type="text" id="keywords" name="keywords" placeholder="Keywards" size="60" required>
-                <textarea cols="10" rows="10" id="details" name="details" placeholder= "Enter product details and description here..."></textarea>
+                <br /><br />
+                <textarea cols="10" rows="5" id="details" name="details" placeholder= "Enter product details and description here..."></textarea>
                 <br />
 
             <br />
@@ -120,5 +123,14 @@ require 'session_validation.php';
 <script src="../js/jquery-1.11.3.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../scripts/main.js"></script>
+<script>
+$(function() {
+
+   $('.js-jumbo').click(function() {
+      $('#message1').toggleClass('in');
+   });
+
+});
+</script>
 </body>
 </html>

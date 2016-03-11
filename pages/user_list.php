@@ -86,7 +86,7 @@ if(isset($_POST['productName'])){
         $users = 'class="active"';
         include_once 'header.php'
         ?>
-        <a href="#inventoryForm" class="menu">+ Add User</a>
+        <a href="#inventoryForm" class="btn js-jumbo menu addBtn">+ Add User</a>
 
         <p>Admin Users: </p>
         <br/>
@@ -110,64 +110,44 @@ if(isset($_POST['productName'])){
             </table>
         </div>
 
-
         <a name="inventoryForm" id="inventoryForm"></a>
-        <div class="form">
+
+      <div id="message1" class="jumbotron flyover flyover-centered">
+        <div class="">
             <form enctype="multipart/form-data" method="post" >
-                <h1>User Details</h1>
+                <h2>User Details</h2>
                     <input type="text" name="userName" placeholder="User Name">
-                    <br />
+                    <br /><br />
                     <input type="text" name="password" placeholder="Password">
                     <br /><br />
-                    <select name="category">
-                        <option >-- Category --</option>
-                        <optgroup label="iPhone">
-                            <option value="OS">iPhone 6 plus</option>
-                            <option value="EL">iPhone 6</option>
-                            <option value="SD">iPhone 5</option>
-                        </optgroup>
-                        <optgroup label="iPad">
-                            <option value="OS">iPad Pro</option>
-                            <option value="EL">iPad Air 2</option>
-                            <option value="SD">iPad Air</option>
-                        </optgroup>
-                        <optgroup label="MacBook">
-                            <option value="OS">MacBook Pro</option>
-                            <option value="EL">MacBook Air</option>
-                            <option value="SD">New MacBook</option>
-                        </optgroup>
-                    </select>
-                    <select name="subcategory">
-                        <option >-- SubCategory --</option>
-                        <optgroup label="iPhone">
-                            <option value="OS">iPhone 6 plus</option>
-                            <option value="EL">iPhone 6</option>
-                            <option value="SD">iPhone 5</option>
-                        </optgroup>
-                        <optgroup label="iPad">
-                            <option value="OS">iPad Pro</option>
-                            <option value="EL">iPad Air 2</option>
-                            <option value="SD">iPad Air</option>
-                        </optgroup>
-                        <optgroup label="MacBook">
-                            <option value="OS">MacBook Pro</option>
-                            <option value="EL">MacBook Air</option>
-                            <option value="SD">New MacBook</option>
-                        </optgroup>
-                    </select>
+                    <input type="email" name="email" placeholder="Email">
+                    <br /><br />
+
                     <input type="file" name="photo" id="photo" />
-                    <br />
-                    <textarea cols="10" rows="10" name="details" placeholder= "Enter product details and description here..."></textarea>
                     <br />
 
                 <br />
 
-                <button type="submit" class="button">Add User</button>
+                <button type="submit" class="btn btn-primary">Add User</button><br />
+
             </form>
         </div>
+        <br />
+        <button class="btn btn-primary js-jumbo">Done</button>
+      </div>
 
 
     </div>
 </div>
+<script>
+$(function() {
+
+   $('.js-jumbo').click(function() {
+      $('#message1').toggleClass('in');
+   });
+
+});
+</script>
+
 </body>
 </html>

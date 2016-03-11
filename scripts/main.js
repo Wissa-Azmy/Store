@@ -209,5 +209,3 @@ $('table').on('click','.delete', function(event) {
 //            console.log("update completed");
 //        });
 //});
-
-
