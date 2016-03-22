@@ -17,7 +17,7 @@ var xhr = new XMLHttpRequest();
 
 $( window ).load(function() {
     $.ajax({
-            url: '../pages/inventory_process.php',
+            url: '../admin/inventory_process.php',
             type: 'GET'
             // dataType: 'default: Intelligent Guess (Other values: xml, json, script, or html)',
         })
@@ -58,7 +58,7 @@ sub.on('click', function(event) {
         //alert("update clicked "+btnval);
 
         $.ajax({
-                url: '../pages/inventory_process.php?update='+btnval,
+                url: '../admin/inventory_process.php?update='+btnval,
                 type: 'POST',
                 data: {productName: productName.val(), price: price.val(), details: details.val(), category: category.val(), subcategory: subcategory.val(), photo: photo.val(), keywords: keywords.val()}
             })
@@ -85,7 +85,7 @@ sub.on('click', function(event) {
         //alert("submit clicked");
 
         $.ajax({
-                url: '../pages/inventory_process.php?add=1',
+                url: '../admin/inventory_process.php?add=1',
                 type: 'POST',
                 data: {productName: productName.val(), price: price.val(), details: details.val(), category: category.val(), subcategory: subcategory.val(), photo: photo.val(), keywords: keywords.val()}
             })
@@ -112,7 +112,7 @@ $('table').on('click','.edit', function(event) {
 
     $.ajax({
 
-            url: '../pages/inventory_process.php?edit='+btnval,
+            url: '../admin/inventory_process.php?edit='+btnval,
             type: 'GET'
         })
         .success(function(event) {
@@ -143,7 +143,7 @@ $('table').on('click','.delete', function(event) {
 
     $.ajax({
 
-            url: '../pages/inventory_process.php?del='+btnval,
+            url: '../admin/inventory_process.php?del='+btnval,
             type: 'GET'
         })
         .success(function(event) {
@@ -166,7 +166,7 @@ $('table').on('click','.delete', function(event) {
 //    event.preventDefault();
 //
 //    $.ajax({
-//            url: '../pages/inventory_process.php',
+//            url: '../admin/inventory_process.php',
 //            type: 'POST',
 //            data: {productName: productName.val(), price: price.val(), details: details.val(), category: category.val(), subcategory: subcategory.val(), photo: photo.val(), keywords: keywords.val()}
 //        })
@@ -192,7 +192,7 @@ $('table').on('click','.delete', function(event) {
 //    btnval = $(this).val();
 //
 //    $.ajax({
-//            url: '../pages/inventory_process.php?update='+btnval,
+//            url: '../admin/inventory_process.php?update='+btnval,
 //            type: 'GET'
 //            //data: {productName: productName.val(), price: price.val(), details: details.val(), category: category.val(), subcategory: subcategory.val(), photo: photo.val(), keywords: keywords.val()}
 //        })
